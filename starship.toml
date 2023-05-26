@@ -1,0 +1,94 @@
+# ~/.config/starship.toml
+# Get editor completions based on the config schema
+
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = true
+
+# format = """
+# $all\
+# $line_break\
+# $line_break\
+# $os \
+# $character \
+# """
+
+[character]
+success_symbol = "[❯ ](bold green)"
+error_symbol = "[❯ ](bold red)"
+
+[os]
+disabled = false
+# format = "[](fg:blue)[$symbol](bg:blue fg:black)[](fg:blue)"
+format = "$symbol"
+
+[os.symbols]
+Arch = "[ ](fg:bright-blue)"
+Debian = "[ ](fg:red)"
+EndeavourOS = "[ ](fg:purple)"
+Fedora = "[ ](fg:blue)"
+NixOS = "[ ](fg:bright-white)"
+openSUSE = "[ ](fg:green)"
+SUSE = "[ ](fg:green)"
+Windows = "[󰨡 ](fg:blue)"
+Ubuntu = "[ ](fg:#f28500)"
+
+[username]
+show_always=true
+format = "[  $user]($style) in "
+# [directory]
+# format = "[](fg:bright-black)[$path](bg:bright-black fg:white)[](fg:bright-black) "
+# read_only = "  "
+# truncation_length = 4
+# truncation_symbol = "~/…/"
+# truncate_to_repo = true
+style_user = "#EFFA78"
+
+[directory.substitutions]
+"Documents" = " "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+"Videos" = " "
+"Projects" = "󱌢 "
+"School" = "󰑴 "
+"www" = ""
+".config" = " "
+
+[git_branch]
+symbol = " "
+style = "bold fg:#FF79C6"
+# format = "[](fg:bright-black)[on $symbol$branch(:$remote_branch)]($style)[](fg:bright-black) "
+truncation_length = 20
+
+[docker_context]
+symbol = " "
+format = "via [$symbol$context]($style) "
+style = "blue bold"
+only_with_files = true
+detect_files = ["docker-compose.yml", "docker-compose.yaml", "Dockerfile"]
+detect_folders = ["docker"]
+disabled = false
+
+[nodejs]
+detect_files = ["package.json", ".node-version"]
+detect_folders = ["node_modules"]
+# symbol = " "
+# style = "bold yellow"
+# format = "via [$symbol]($style)"
+
+[package]
+disabled = false
+style = "#EAF08D"
+
+[aws]
+disabled = true
+format = 'on [$symbol$region]($style) '
+style = 'bold yellow'
+symbol = '☁️ '
+[aws.region_aliases]
+ap-southeast-2 = ' (au-2)'
+us-east-1 = ' (ue-1)'
+
+[directory]
+style = 'bold #8D79BA'
