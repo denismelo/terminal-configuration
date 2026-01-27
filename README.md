@@ -105,11 +105,16 @@ This function exports AWS credentials from the configured profile, making it eas
 
 ## 🎯 Configured Plugins
 
+### Oh My Zsh Plugins
 - **git**: Git integration and shortcuts
 - **zsh-autosuggestions**: Fish-like autosuggestions
 - **fast-syntax-highlighting**: Fast syntax highlighting for commands
 - **zsh-autocomplete**: Real-time type-ahead completion
+
+### Zinit Plugins
 - **zsh-z**: Jump around directories quickly
+- **fast-syntax-highlighting**: Additional syntax highlighting via Zinit
+- **zsh-completions**: Extended completion definitions
 
 ## 🎨 Starship Customization
 
@@ -124,15 +129,16 @@ The Starship prompt is configured with:
 - Beautiful color scheme
 
 ### Directory Icons
-- Documents: 📄
-- Downloads: 📥
-- Music: 🎵
-- Pictures: 🖼️
-- Videos: 🎬
-- Projects: 🛠️
-- School: 🎓
-- www: 🌐
-- .config: ⚙️
+The starship configuration includes custom icons for common directories:
+- Documents: " " (folder icon)
+- Downloads: " " (download icon)
+- Music: " " (music icon)
+- Pictures: " " (picture icon)
+- Videos: " " (video icon)
+- Projects: "󱌢 " (project icon)
+- School: "󰑴 " (school icon)
+- www: "" (web icon)
+- .config: " " (config icon)
 
 ## 🚀 Additional Tools
 
@@ -161,6 +167,7 @@ Windsurf CLI tools are added to PATH.
 - [Oh My Zsh](https://ohmyz.sh/)
 - [Zinit](https://github.com/zdharma-continuum/zinit)
 - [Nerd Fonts](https://www.nerdfonts.com/)
+- [FiraCode Font Download](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.1/FiraCode.zip)
 - [More configuration details](https://gist.github.com/n1snt/454b879b8f0b7995740ae04c5fb5b7df)
 
 ## 👤 Author
