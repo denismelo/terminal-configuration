@@ -4,6 +4,7 @@ export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 ZSH_THEME=""
+command_timeout=0
 
 # Which plugins would you like to load?
 plugins=(git zsh-autosuggestions fast-syntax-highlighting zsh-autocomplete)
@@ -84,3 +85,26 @@ export PATH="$(yarn global bin):$PATH"
 zplugin load zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
 eval "$(starship init zsh)"
+# bun completions
+[ -s "/Users/denis/.bun/_bun" ] && source "/Users/denis/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+
+# Added by Windsurf
+export PATH="/Users/denis/.codeium/windsurf/bin:$PATH"
+
+# Task Master aliases added on 10/7/2025
+alias tm='task-master'
+alias taskmaster='task-master'
+
+alias avity='/Applications/Antigravity.app/Contents/Resources/app/bin/antigravity'
+
+aws-renew() {
+  eval "$(aws configure export-credentials \
+    --profile TechLeadAccess-174745311321 \
+    --format env)"
+  echo "AWS credentials renovadas"
+}
