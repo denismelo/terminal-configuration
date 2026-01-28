@@ -103,6 +103,7 @@ alias taskmaster='task-master'
 alias avity='/Applications/Antigravity.app/Contents/Resources/app/bin/antigravity'
 
 aws-renew() {
+  aws sso login --profile TechLeadAccess-174745311321
   eval "$(aws configure export-credentials \
     --profile TechLeadAccess-174745311321 \
     --format env)"
